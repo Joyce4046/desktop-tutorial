@@ -13,7 +13,9 @@ def PART2():
             question_dict['option2'] = row['option2']
             question_dict['answer'] = row['answer']
             question_dict['info'] = row['info']
-            question_dict['score'] = row['score']
+            question_dict['score1'] = row['score1']
+            question_dict['score2'] = row['score2']
+
 
             question_list.append(question_dict)
 
