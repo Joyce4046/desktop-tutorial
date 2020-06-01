@@ -6,24 +6,27 @@ win = tk.Tk()
 win.geometry('500x300')
 win.config(bg = '#323232')
 
-def test1():
+def test1(i):
     global number
-    temp = questions[number]
-    answer[temp] = 0
-    number += 1
-    if number <= 3:
-        question.config(text = questions[number])
+    if number < 3:    
+        number += 1
+    temp = questions[i]
+    answer[temp] = 1
+    i += 1
+    if i <= 3:
+        question.config(text = questions[i])
         
     print(answer)
     
 
-def test2():
+def test2(i):
     global number
-    
-    answer[questions[number]] = 1
-    number += 1
-    if number <= 3:    
-        question.config(text = questions[number])
+    if number < 3:    
+        number += 1
+    answer[questions[i]] = 0
+    i += 1
+    if i <= 3:    
+        question.config(text = questions[i])
         
     print(answer)
     
@@ -45,8 +48,8 @@ question.place(anchor = 'center', relx = 0.5, rely = 0.45)
 
 
 answer = {}
-ans_btn1 = tk.Button(text = '是', height = 1, width = 5, font = '微軟正黑體 20', command = test1)
-ans_btn2 = tk.Button(text = '否', height = 1, width = 5, font = '微軟正黑體 20', command = test2)
+ans_btn1 = tk.Button(text = '是', height = 1, width = 5, font = '微軟正黑體 20', command = lambda: test1(number))
+ans_btn2 = tk.Button(text = '否', height = 1, width = 5, font = '微軟正黑體 20', command = lambda: test2(number))
 ans_btn1.place(anchor = 'center', relx = 0.3, rely = 0.8)
 ans_btn2.place(anchor = 'center', relx = 0.7, rely = 0.8)
 
