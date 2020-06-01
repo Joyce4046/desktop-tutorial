@@ -1,7 +1,7 @@
 import csv
 
 # 讀取問題存進dict
-file = "C:\\Users\\sherry liu\\Desktop\\sherry\\大四下\\python\\question_part1.csv"
+file = "src//question_part1.csv"
 filesopen = open(file, 'r', newline='')
 rows = csv.reader(filesopen)
 question_dict = dict()
@@ -9,7 +9,7 @@ for row in rows:
     question_dict[int(row[0])] = row[1:]
 
 # 讀取貓咪資料存進dict
-file1 = "C:\\Users\\sherry liu\\Desktop\\sherry\\大四下\\python\\貓咪.csv"
+file1 = "src//貓咪.csv"
 filesopen = open(file1, 'r', newline='')
 rows = csv.reader(filesopen)
 cat_dict = dict()
