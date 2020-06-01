@@ -1,7 +1,7 @@
 import csv
 import random
 
-def PART2(n):
+def PART2():
 
     with open(file='part2.csv', mode='r', encoding='utf-8-sig') as part2:
         question_list = []  # list of dict
@@ -17,12 +17,11 @@ def PART2(n):
 
             question_list.append(question_dict)
 
-    random_num = random.choices(range(30), k = n)
+    random_num = random.choices(range(30), k = 10)
 
     final_question = []
     for num in random_num:
         final_question.append(question_list[num])
     
     return final_question
-
 
