@@ -49,9 +49,13 @@ class Showing3Cats(tk.Frame):
 
     def infos(self):
         w = 37
-        self.info1 = tk.Label(self, height = 10, width = w, text = 'name: \nage: \nothers: \nurl: ', anchor="w", justify = 'left')
-        self.info2 = tk.Label(self, height = 10, width = w, text = 'name: \nage: \nothers: \nurl:', anchor="w", justify = 'left')
-        self.info3 = tk.Label(self, height = 10, width = w, text = 'name: \nage: \nothers: \nurl: ', anchor="w", justify = 'left')
+        name1, gender1, yrs1, color1, url1 = 'Dodo', '公', '3', '白底橘貓', '123'
+        name2, gender2, yrs2, color2, url2 = 'Lulu', '母', '3', '三花', '123'
+        name3, gender3, yrs3, color3, url3 = 'Peter', '公', '2', '乳牛', '123'
+
+        self.info1 = tk.Label(self, height = 10, width = w, text = '姓名:{name}\n性別:{gender}\n年紀:{yrs}\n花色:{color}\n詳細資料:{url}'.format(name=name1, gender=gender1, yrs=yrs1, color=color1, url=url1), anchor="w", justify = 'left')
+        self.info2 = tk.Label(self, height = 10, width = w, text = '姓名:{name}\n性別:{gender}\n年紀:{yrs}\n花色:{color}\n詳細資料:{url}'.format(name=name2, gender=gender2, yrs=yrs2, color=color2, url=url2), anchor="w", justify = 'left')
+        self.info3 = tk.Label(self, height = 10, width = w, text = '姓名:{name}\n性別:{gender}\n年紀:{yrs}\n花色:{color}\n詳細資料:{url}'.format(name=name3, gender=gender3, yrs=yrs3, color=color3, url=url3), anchor="w", justify = 'left')
 
         self.info1.grid(row = 2, column = 0, sticky = tk.W)
         self.info2.grid(row = 2, column = 1, sticky = tk.W)
