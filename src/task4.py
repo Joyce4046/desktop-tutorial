@@ -97,20 +97,20 @@ def get_3_cat(cat_score):
             break
     return(max_id_all)
     
-# q_id = 1
-# next_q_id = 1
-# color_list = []
-# while q_id != 0:
-    # q_content, ans_1, ans_2 = get_question(question_dict, q_id, color_list)
-    # ans, adjust_type, next_q_id = click_ans2(question_dict, q_id)
-    # cat_score = calculate_score(question_dict, cat_dict, cat_score, q_id, ans, adjust_type)
-    # q_id = int(next_q_id)
-    # print(q_content)
-    # if q_id >= 11:
-        # if q_id <= 13:
-            # color_list.append(ans_1)
+q_id = 1
+next_q_id = 1
+color_list = []
+while q_id != 0:
+    q_content, ans_1, ans_2 = get_question(question_dict, q_id, color_list)
+    ans, adjust_type, next_q_id = click_ans2(question_dict, q_id)
+    cat_score = calculate_score(question_dict, cat_dict, cat_score, q_id, ans, adjust_type)
+    q_id = int(next_q_id)
+    print(q_content)
+    if q_id >= 11:
+        if q_id <= 13:
+            color_list.append(ans_1)
 
-# print(cat_score)
+print(cat_score)
 
-# max_id_all = get_3_cat(cat_score)
-# print(max_id_all)
+max_id_all = get_3_cat(cat_score)
+print(max_id_all)
