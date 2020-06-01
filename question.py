@@ -8,10 +8,10 @@ win.config(bg = '#323232')
 
 def test1():
     global number
-    
+    temp = questions[number]
+    answer[temp] = 0
+    number += 1
     if number <= 3:
-        answer.append(0)
-        number += 1
         question.config(text = questions[number])
         
     print(answer)
@@ -19,9 +19,10 @@ def test1():
 
 def test2():
     global number
-    if number <= 3:
-        answer.append(1)
-        number += 1
+    
+    answer[questions[number]] = 1
+    number += 1
+    if number <= 3:    
         question.config(text = questions[number])
         
     print(answer)
@@ -31,7 +32,7 @@ def test3():
     global number
     if number > 0:
         number -= 1
-        answer.pop(answer[-1])
+        answer[questions[number]] = ''
         question.config(text = questions[number])
     
     print(answer)
@@ -43,7 +44,7 @@ question.place(anchor = 'center', relx = 0.5, rely = 0.45)
 
 
 
-answer = []
+answer = {}
 ans_btn1 = tk.Button(text = '是', height = 1, width = 5, font = '微軟正黑體 20', command = test1)
 ans_btn2 = tk.Button(text = '否', height = 1, width = 5, font = '微軟正黑體 20', command = test2)
 ans_btn1.place(anchor = 'center', relx = 0.3, rely = 0.8)
