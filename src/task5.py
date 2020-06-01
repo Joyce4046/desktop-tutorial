@@ -13,6 +13,7 @@ def PART2(n):
             question_dict['option2'] = row['option2']
             question_dict['answer'] = row['answer']
             question_dict['info'] = row['info']
+            question_dict['score'] = row['score']
 
             question_list.append(question_dict)
 
@@ -24,4 +25,4 @@ def PART2(n):
     
     return final_question
 
-# print(PART2(5))
+
