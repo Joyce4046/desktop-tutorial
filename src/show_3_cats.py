@@ -11,7 +11,7 @@ class Showing3Cats(tk.Frame):
         self.main_page_btn()
 
     def title_words(self):
-        self.title = tk.Label(self, height = 5, text='適配*3', bg='green')
+        self.title = tk.Label(self, height = 3, text='最適合你的貓咪', font=('Times', 20, 'bold'), bg='green')
         self.title.grid(row = 0, column = 0, columnspan=3, sticky = tk.NE + tk.SW)
 
     def resize(self, w_box, h_box, pil_image):  
@@ -28,11 +28,11 @@ class Showing3Cats(tk.Frame):
         h = 300
         wt = 200
         ht = 200
-        img1 = Image.open('src\\Dodo.jpg')
+        img1 = Image.open('src\\cats\\Dodo.jpg')
         img1_resized = self.resize(wt, ht, img1)
-        img2 = Image.open('src\\Lulu.jpg')
+        img2 = Image.open('src\\cats\\Lulu.jpg')
         img2_resized = self.resize(wt, ht, img2)
-        img3 = Image.open('src\\Peter.jpg')
+        img3 = Image.open('src\\cats\\Peter.jpg')
         img3_resized = self.resize(wt, ht, img3)
 
         self.photo1 = ImageTk.PhotoImage(img1_resized)
@@ -41,7 +41,7 @@ class Showing3Cats(tk.Frame):
 
         self.image1 = tk.Label(self, image = self.photo1, height = h, width = w, bg='red')
         self.image2 = tk.Label(self, image = self.photo2, height = h, width = w, bg='blue')
-        self.image3 = tk.Label(self, image = self.photo3, height = h, width = w, bg='yellow')
+        self.image3 = tk.Label(self, image = self.photo3, height = h, width = w, bg='purple')
 
         self.image1.grid(row = 1, column = 0, sticky = tk.NE + tk.SW)
         self.image2.grid(row = 1, column = 1, sticky = tk.NE + tk.SW)
